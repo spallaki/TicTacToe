@@ -6,8 +6,10 @@ class Game extends Component {
   render() {
     return (
       <div className="app">
-        <h2>Welcome to Tic Tac Toe</h2>
+        <h2>Click to Play</h2>
         <GameGrid />
+        <p id="won" style={{ display: 'none' }}>You won!</p>
+        <p id="lost" style={{ display: 'none' }}>You lost.</p>
       </div>
     );
   }
