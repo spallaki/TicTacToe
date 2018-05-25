@@ -1,0 +1,32 @@
+.app {
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6B6B6B;
+  margin: auto;
+}
+
+.game-outline {
+  border: 1px solid #9B9B9B;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  border: 1px solid #9B9B9B;
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3C64AF;
+  font-size: 60px;
+}
