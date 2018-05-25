@@ -3,6 +3,10 @@ import '../styles/App.css';
 import GameGrid from "../Components/GameGrid";
 
 class Game extends Component {
+  constructor(props) {
+    super(props)
+  }
+  
   render() {
     return (
       <div className="app">

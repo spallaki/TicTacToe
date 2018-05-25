@@ -8,8 +8,12 @@ class GameGrid extends Component {
 
     this.state = {
       squares: ["", "", "", "", "x", "", "", "", ""],
+      playerXTurn: true,
+      playerOTurn: false,
     };
   }
+
+
 
   render() {
     return (
