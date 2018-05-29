@@ -7,20 +7,21 @@ class GameGrid extends Component {
     super(props);
 
     this.state = {
-      squares: ["", "", "", "", "x", "", "", "", ""],
-      playerXTurn: true,
-      playerOTurn: false,
+      squares: ["", "", "", "", "", "", "", "", ""],
+      emptySquares: 9,
+      // if emptySquares = 0 -> set gameOver: true & display winner
     };
   }
 
 
-
   render() {
+    console.log('squares state', this.state);
     return (
       <div className="game-outline">
         {
           this.state.squares.map((square, idx) => (
-            <Square id={idx} square={square} />
+            // each square has a an "" value through squareProps and an id 0->8
+            <Square id={idx} squareProp={square} />
           ))
         }
       </div>
