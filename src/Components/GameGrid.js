@@ -8,13 +8,18 @@ class GameGrid extends Component {
   }
 
   render() {
-    console.log('this.props GAMEGRID', this.props);
+    // console.log('this.props GAMEGRID', this.props);
     return (
       <div className="game-outline">
         {
           this.props.squares.map((square, idx) => (
             // id is the index of the "" in the array .map()
-            <Square key={idx} idx={idx} turn={this.props.turn} onClickSquare={this.props.onClick}/>
+            <Square
+              key={idx}
+              idx={idx}
+              turn={this.props.turn}
+              onClickSquare={this.props.onClick}
+            />
           ))
         }
       </div>
