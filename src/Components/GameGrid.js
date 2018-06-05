@@ -5,23 +5,16 @@ import Square from "../Components/Square";
 class GameGrid extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      squares: ["", "", "", "", "", "", "", "", ""],
-      emptySquares: 9,
-      // if emptySquares = 0 -> set gameOver: true & display winner
-    };
   }
 
-
   render() {
-    console.log('squares state', this.state);
+    console.log('this.props GAMEGRID', this.props);
     return (
       <div className="game-outline">
         {
-          this.state.squares.map((square, idx) => (
-            // each square has a an "" value through squareProps and an id 0->8
-            <Square id={idx} squareProp={square} />
+          this.props.squares.map((square, idx) => (
+            // id is the index of the "" in the array .map()
+            <Square key={idx} idx={idx} turn={this.props.turn} onClickSquare={this.props.onClick}/>
           ))
         }
       </div>

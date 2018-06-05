@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 40px;
   width: 120px;
   background-color: #3C64AF;
   color: #FFFFFF;
@@ -53,4 +53,5 @@
   padding: 5px;
   text-decoration: none;
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
 }

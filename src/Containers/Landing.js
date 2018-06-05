@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import Game from "./Game";
-import { Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Landing extends Component {
   render() {

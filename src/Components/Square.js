@@ -6,19 +6,28 @@ class Square extends Component {
     super(props)
 
     this.state = {
-      empty: this.props.squareProp,
+      clicked: "",
     }
   }
 
-  // playerO() => {
-  //
+  // playerO() {
+  //   // randomly generate an O in any squares that are not filled
+  //   // and is called when the onClick on square div is triggered
+  //   console.log('i am an o');
   // }
 
+  onChangeSquare() {
+    this.props.onClickSquare(this.props.idx);
+    this.setState({
+      clicked: this.props.turn,
+    })
+  }
+
   render() {
-    console.log('this.props', this.props.squareProps);
+    // console.log('this.props SQUARE', this.props);
     return (
-      <div className="square" onClick={e => this.setState({ empty: "x" })}>
-        {this.state.empty}
+      <div className="square" onClick={() => this.onChangeSquare()}>
+        {this.state.clicked}
       </div>
     );
   }
